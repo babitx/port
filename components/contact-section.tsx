@@ -45,10 +45,16 @@ export default function ContactSection() {
       icon: "📍",
     },
     {
-      label: "Social",
-      value: "GitHub & LinkedIn",
-      href: "#",
-      icon: "🔗",
+      label: "GitHub",
+      value: "babitx",
+      href: "https://github.com/babitx",
+      icon: "🐙",
+    },
+    {
+      label: "LinkedIn",
+      value: "babitxA",
+      href: "https://linkedin.com/babitxA",
+      icon: "💼",
     },
   ]
 
@@ -89,6 +95,8 @@ export default function ContactSection() {
             <motion.a
               key={idx}
               href={item.href}
+              target={item.href.startsWith("http") ? "_blank" : undefined}
+              rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
               whileHover={{ y: -5, scale: 1.02 }}
               className="group p-6 rounded-lg glass-effect hover:bg-primary/10 transition-all cursor-pointer"
             >
